@@ -1,4 +1,4 @@
-from defs import *
+from auxiliares.funciones import *
 from UTN_Heroes_Dataset.utn_pp import clear_console
 matriz = get_original_matrix() 
 

@@ -102,6 +102,16 @@ def mayor_cantidad(matriz:list[list], indice:int)-> int:
     return mayor
 
 def recaudaciones(matriz:list[list])-> list[list]:
+    """_summary_
+    Multiplica la cantidad de autos con el precio unitario 
+    dando asi la racaudacion
+
+    Args:
+        matriz (list[list]): Matriz de la cual se toman los datos
+
+    Returns:
+        list[list]: lista con recaudaciones
+    """
     matriz_nueva = matriz_maker(matriz)
     for items in range(len(matriz_nueva)):
         recaudaciones = matriz_nueva[items][3] * matriz_nueva[items][4]
@@ -109,6 +119,17 @@ def recaudaciones(matriz:list[list])-> list[list]:
     return matriz_nueva
 
 def mayor_que(matriz:list[list], numero:int, indice:int)-> int:
+    """_summary_
+    busca valores que sean mayores que otro ya preselecto
+
+    Args:
+        matriz (list[list]): Matriz en la cual se buscan los valores
+        numero (int): Numero que se usara para comparar
+        indice (int): Indice de la matriz que usaremos
+
+    Returns:
+        int: Resultado
+    """
     total = 0
     for items in matriz[indice]:
         if items >= numero:
@@ -116,6 +137,12 @@ def mayor_que(matriz:list[list], numero:int, indice:int)-> int:
     return total
 
 def porcentajes(matriz: list[list])-> None:
+    """_summary_
+    busca el porcentajes de la lista
+
+    Args:
+        matriz (list[list]): matriz de la cual se toman los datos
+    """
     mensaje = ""
     total = sumar_cantidades(matriz, 2)
     for items in range(len(matriz[2])):
@@ -125,7 +152,17 @@ def porcentajes(matriz: list[list])-> None:
         print(mensaje)
         mensaje = ""
 
-def ordenar(matriz: list[list], posicion:int):
+def ordenar(matriz: list[list], posicion:int) -> list[list]:
+    """_summary_
+    Ordena la lista con todos los datos en base a la ganancias y lo muestra
+
+    Args:
+        matriz (list[list]): matriz de la cual se tomartan los datos
+        posicion (int): Posicion a usar
+
+    Returns:
+        list[list]: _description_
+    """
     for indice in range(len(matriz) - 1 ):
         indice_2 = indice
         for items in range(indice + 1, len(matriz[posicion])):
